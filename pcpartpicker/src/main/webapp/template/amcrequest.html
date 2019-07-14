@@ -1,0 +1,49 @@
+<form data-ng-submit="amcrequestCtrl.submit()">
+		<h3>{{headerText}}</h3>
+		
+		
+		
+	
+	
+	
+	<div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>ID.</th>
+                              <th>NAME</th>
+                              <th>Email</th>
+                              
+                              <th>Type Of Contract:</th>
+                              <th>Agreement Period:</th>
+                             <th> Date Of Expiry: </th>
+                             <th> Product: </th>
+                             <th> Quantity: </th>
+                              <th> Cost:  </th>
+                              <th width="20%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="u in amcrequestCtrl.amcrequest">
+                              
+                              <td><span ng-bind="u.id"></span></td>
+                              <td><span ng-bind="u.name"></span></td>
+                              
+                              <td><span ng-bind="u.email"></span></td>
+                              
+                              <td><span ng-bind="u.typeofcontract"></span></td>
+                              <td><span ng-bind="u.period"></span></td>
+                              <td><span ng-bind="u.dateofcontract"></span></td>
+                              <td><span ng-bind="u.dateofexpiry"></span></td>
+                              <td><span ng-bind="u.product"></span></td>
+                              <td><span ng-bind="u.quantity"></span></td>
+                              <td><span ng-bind="u.cost"></span></td>
+                              <td>
+                              <button type="button" ng-click="amcrequestCtrl.editAmc(u)" class="btn btn-success custom-width">Edit</button>  <button type="button" ng-click="amcrequestCtrl.deleteAmc(u.id)" class="btn btn-danger custom-width">Remove</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  </div>
+                  </form>
+                  

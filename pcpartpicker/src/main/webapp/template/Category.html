@@ -1,0 +1,46 @@
+<div class="container">
+<div class="main">
+<div class="registration">
+		<div class="registration_left">
+		<h2>new user? <span> create an account </span></h2>
+<div class="registration_form">
+<form id="registration_form" data-ng-submit="catCtrl.submit()">
+		
+		<div>
+		<label>
+		<input placeholder="Category name:" type="text" data-ng-model="catCtrl.category.categoryName" tabindex="1" required autofocus>
+		<!--Category Name: <input type="text" data-ng-model="catCtrl.category.categoryName"></p>  -->
+		</label>
+		</div>
+		<div>
+		<input type="submit" value="Submit" id="register-submit"><br>	
+		</div>
+</div>
+</div>
+</div>	</div>	 
+		 
+		 <div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>ID.</th>
+                              <th>Name</th>
+                              <th width="20%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="u in catCtrl.listOfcategory">
+
+                              <td><span ng-bind="u.categoryId"></span></td>
+                              <td><span ng-bind="u.categoryName"></span></td>
+                              <td>
+                              <button type="button" ng-click="catCtrl.editCategory(u)" class="btn btn-success custom-width">Edit</button>  <button type="button" ng-click="catCtrl.deleteCategory(u.categoryId)" class="btn btn-danger custom-width">Remove</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>	 
+		 
+		 </div>
+	</form>
+

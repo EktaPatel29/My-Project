@@ -1,0 +1,40 @@
+<html data-ng-app="AmcformSubmit">
+<head>
+<meta charset="ISO-8859-1">
+<title>Report Pdf</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript">
+
+var app = angular.module('AmcformSubmit', []);
+
+ app.controller('AmcFormSubmitController',[ '$scope', '$http', function($scope, $http) {
+	$scope.getPdf = function(){
+		alert("hii");
+		
+	  $http.get('/listofbuyers', {responseType: 'arraybuffer'})
+	  .success(function (data) {
+		  alert("suceess");
+	    var file = new Blob([data], {type: 'application/pdf'});
+	    var fileURL = URL.createObjectURL(file);
+	    window.open(fileURL);
+	  })
+	  .error(function(data, status, headers, config) {
+			//$scope.getAllAmc();
+			alert( "Exception details: " + JSON.stringify({data: data}));
+		});
+	  
+	}
+
+	}]); 
+</script>
+</head>
+<body >
+ <div data-ng-controller="AmcFormSubmitController">
+<input type="button" ng-click="getPdf()" value="Show PDF">
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<div class="container">
+<div class="main">
+<div class="registration">
+		<div class="registration_left">
+		<h2>new user? <span> create an account </span></h2>
+<div class="registration_form">
+<form id="registration_form" data-ng-submit="amclistCtrl.submit()">
+		
+<div>
+<label>
+<input placeholder="Name:" type="text" data-ng-model="amclistCtrl.amc.name" tabindex="1" required autofocus>
+</label></div>
+
+<div>
+<label>
+<input placeholder="Description:" type="text" data-ng-model="amclistCtrl.amc.description" tabindex="1" required autofocus>
+</label></div>
+		
+<div>
+<label>
+<input placeholder="Duration:" type="text" data-ng-model="amclistCtrl.amc.duration" tabindex="1" required autofocus>
+</label></div>
+		
+<div>
+<input type="submit" id="register-submit" value="Submit">
+</div>		
+		
+		
+		<!-- <p>Name: <input type="text" data-ng-model="amclistCtrl.amc.name"></p>
+		<p>Description: <input type="text" data-ng-model="amclistCtrl.amc.description"></p>
+		<p>Duration: <input type="text" data-ng-model="amclistCtrl.amc.duration"></p>
+		
+		<input type="submit" id="submit" value="Submit" /><br>	
+		 -->
+		
+		</div>
+</div>
+</div>	</div>
+	
+	<div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>ID.</th>
+                              <th>NAME</th>
+                              <th>DESCRIPTION</th>
+                              
+                              <th>DURATION</th>
+                              <th width="20%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="u in amclistCtrl.amclist">
+                              
+                              <td><span ng-bind="u.type_id"></span></td>
+                              <td><span ng-bind="u.name"></span></td>
+                              
+                              <td><span ng-bind="u.descrption"></span></td>
+                              <td><span ng-bind="u.duration"></span></td>
+                              <td>
+                              <button type="button" ng-click="amclistCtrl.editAmc(u)" class="btn btn-success custom-width">Edit</button>  <button type="button" ng-click="amclistCtrl.deleteAmc(u.type_id)" class="btn btn-danger custom-width">Remove</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  </div>
+</div>
+ </form>
+                  

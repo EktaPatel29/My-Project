@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+
+    <meta charset="utf-8">
+    <title>Service App</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" />
+      link rel="stylesheet" href="css/app.css" />--
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>    
+    <script src="js/vendor/angular-pdf/dist/angular-pdf.js"></script>  -->
+    
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary JavaScript plugins) -->
+<script type='text/javascript' src="js/jquery-1.11.1.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+<!-- start menu -->
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<script src="js/menu_jquery.js"></script>
+<script src="js/simpleCart.min.js"> </script>
+ 
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controller/CategoryController.js"></script>
+	<script src="js/controller/BrandController.js"></script>
+	<script src="js/controller/AmclistController.js"></script>
+	<script src="js/controller/AmcformController.js"></script>
+	<script src="js/controller/AmcinfoController.js"></script>
+	<script src="js/controller/BuyController.js"></script>
+	
+</head>
+<body>
+
+<!-- header_top -->
+<div class="top_bg">
+	<div class="container">
+		<div class="header_top">
+			<div class="top_right">
+				<ul>
+				<!--  	<li><a href="#">help</a></li>| -->
+					<li><a href="contact.html">Contact</a></li>|
+				<!--	<li><a href="#">Delivery information</a></li> -->
+				</ul>
+			</div>
+			<div class="top_left">
+				<!--<h2><span></span> Call us : 032 2352 782</h2>  -->
+			</div>
+				<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!-- header -->
+<div class="header_bg">
+<div class="container">
+	<div class="header">
+	<div class="head-t">
+		<div class="logo">
+			<a href="index.html"><img src="images/img.jpg" class="img-responsive" alt=""/> </a>
+		</div>
+		<!-- start header_right -->
+		<div class="header_right">
+			<div class="rgt-bottom">
+				<div class="log">
+					<div class="login" >
+						<div id="loginContainer"><a href="login"><span>Login</span></a><!-- id="loginButton" -->
+						    <div id="loginBox">                
+						       <!--   <form id="loginForm">
+						                <fieldset id="body">
+						                	<fieldset>
+						                          <label for="email">Email Address</label>
+						                          <input type="text" name="email" id="email">
+						                    </fieldset>
+						                    <fieldset>
+						                            <label for="password">Password</label>
+						                            <input type="password" name="password" id="password">
+						                     </fieldset>
+						                    <input type="submit" id="login" value="Sign in">
+						                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+						            	</fieldset>
+						            <span><a href="#">Forgot your password?</a></span>
+								</form>-->
+							</div> 
+						</div>
+					</div>
+				</div>
+				<div class="reg">
+					<a href="createUser">REGISTER</a>
+				</div>
+			<div class="cart box_1">
+				<a href="checkout.html">
+				<!--  <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>-->
+				</a>		
+				<!--<p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>-->
+				<div class="clearfix"> </div>
+			</div>
+			<div class="create_btn">
+				<a href="checkout.html">CHECKOUT</a>
+			</div> 
+			<div class="clearfix"> </div>
+		</div>
+		<div class="search">
+		    <form>
+		    	<input type="text" value="" placeholder="search...">
+				<input type="submit" value="">
+			</form>
+		</div>
+		<div class="clearfix"> </div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+			<li class="active grid"><a class="color1" href="index.html">Home</a></li>
+			<li class="grid"><a class="color2" href="#">Categories</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Computer Systems</h4>
+								<ul>
+									<li><a ui-sref="amcinfo">Contract & Services </a></li>
+									<li><a ui-sref="category">Category </a></li>
+									<li><a ui-sref="brand">Brand</a></li>
+									<li><a ui-sref="amclist">AmcList </a></li>
+									<li><a ui-sref="buyer">Buyer</a></li>
+									<!--<li><a href="women.html">brands</a></li>-->
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Components</h4>
+								<ul>
+									<li><a href="women.html">CPU Fan</a></li>
+									<li><a href="women.html">External Hard Drive</a></li>
+									<li><a href="women.html">DVD Writer</a></li>
+									<li><a href="women.html">RAM DDR-1,2,3</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Networking</h4>
+								<ul>
+									<li><a href="women.html">Router</a></li>
+									<li><a href="women.html">CCTV Camera</a></li>
+									<li><a href="women.html">USB Cable</a></li>
+									<li><a href="women.html">Parallel Cable</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Office Solutions</h4>
+								<ul>
+									<li><a href="#">Printer</a></li>
+									<li><a href="women.html">Spike Guard</a></li>
+									<li><a href="women.html">Ribbion Catridge</a></li>
+									<li><a href="women.html">Card Reader</a></li>
+									<li><a href="women.html">Antivirus</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Miscellaneous</h4>
+								<ul>
+									<li><a href="women.html">Invertor</a></li>
+									<li><a href="women.html">Cabinet</a></li>
+									
+								</ul>	
+							</div>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>
+		<!-- <li><a class="color4" href="#">Contract</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Maintenance</h4>
+								<ul>
+									<li><a href="women.html">Annual Maintenance</a></li>
+									
+								</ul>	
+							</div>	 -->					
+						</div> 
+						<!-- <div class="col1">
+							<div class="h_nav">
+								<h4>kids</h4>
+								<ul>
+									<li><a href="women.html">Pools&Tees</a></li>
+									<li><a href="women.html">shirts</a></li>
+									<li><a href="women.html">shorts</a></li>
+									<li><a href="women.html">twinsets</a></li>
+									<li><a href="women.html">kurts</a></li>
+									<li><a href="women.html">jackets</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="women.html">Handbag</a></li>
+									<li><a href="women.html">Slingbags</a></li>
+									<li><a href="women.html">Clutches</a></li>
+									<li><a href="women.html">Totes</a></li>
+									<li><a href="women.html">Wallets</a></li>
+									<li><a href="women.html">Laptopbags</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>account</h4>
+								<ul>
+									<li><a href="#">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="women.html">my shopping bag</a></li>
+									<li><a href="women.html">brands</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Accessories</h4>
+								<ul>
+									<li><a href="women.html">Belts</a></li>
+									<li><a href="women.html">Pens</a></li>
+									<li><a href="women.html">Eyeglasses</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">Watches</a></li>
+									<li><a href="women.html">Jewellery</a></li>
+								</ul>	
+							</div>
+						</div> -->
+						
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>				
+			<!-- <li><a class="color5" href="#">Auction</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bidding</h4>
+								<ul>
+									<li><a href="women.html">Products</a></li>
+									<li><a href="women.html">I am bidding on</a></li>
+									<li><a href="women.html">Bids Received</a></li>
+								</ul>	
+							</div>	 -->							
+						</div>
+						<!-- <div class="col1">
+							<div class="h_nav">
+								<h4>kids</h4>
+								<ul>
+									<li><a href="women.html">Pools&Tees</a></li>
+									<li><a href="women.html">shirts</a></li>
+									<li><a href="women.html">shorts</a></li>
+									<li><a href="women.html">twinsets</a></li>
+									<li><a href="women.html">kurts</a></li>
+									<li><a href="women.html">jackets</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="women.html">Handbag</a></li>
+									<li><a href="women.html">Slingbags</a></li>
+									<li><a href="women.html">Clutches</a></li>
+									<li><a href="women.html">Totes</a></li>
+									<li><a href="women.html">Wallets</a></li>
+									<li><a href="women.html">Laptopbags</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>account</h4>
+								<ul>
+									<li><a href="#">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="women.html">my shopping bag</a></li>
+									<li><a href="women.html">brands</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Accessories</h4>
+								<ul>
+									<li><a href="women.html">Belts</a></li>
+									<li><a href="women.html">Pens</a></li>
+									<li><a href="women.html">Eyeglasses</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">Watches</a></li>
+									<li><a href="women.html">Jewellery</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Footwear</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div> -->
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div> 
+    				</div>
+				</li>
+			<!--	<li><a class="color6" href="#">Services</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Support</h4>
+								<ul>
+									<li><a href="women.html">Online Query Solutions</a></li>
+									<li><a href="women.html">Software Update</a></li>
+									
+								</ul>	
+							</div>	  -->						
+						</div>
+						 <!--<div class="col1">
+							<div class="h_nav">
+								<h4>kids</h4>
+								<ul>
+									<li><a href="women.html">Pools&Tees</a></li>
+									<li><a href="women.html">shirts</a></li>
+									<li><a href="women.html">shorts</a></li>
+									<li><a href="women.html">twinsets</a></li>
+									<li><a href="women.html">kurts</a></li>
+									<li><a href="women.html">jackets</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="women.html">Handbag</a></li>
+									<li><a href="women.html">Slingbags</a></li>
+									<li><a href="women.html">Clutches</a></li>
+									<li><a href="women.html">Totes</a></li>
+									<li><a href="women.html">Wallets</a></li>
+									<li><a href="women.html">Laptopbags</a></li>
+								</ul>	
+							</div>												
+						</div> 
+						<div class="col1">
+							<div class="h_nav">
+								<h4>account</h4>
+								<ul>
+									<li><a href="#">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="women.html">my shopping bag</a></li>
+									<li><a href="women.html">brands</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Accessories</h4>
+								<ul>
+									<li><a href="women.html">Belts</a></li>
+									<li><a href="women.html">Pens</a></li>
+									<li><a href="women.html">Eyeglasses</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">Watches</a></li>
+									<li><a href="women.html">Jewellery</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Footwear</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="womens.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>-->
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>				
+			
+				<!-- <li><a class="color7" href="#">GLASSES</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Clothing</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">brands</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>kids</h4>
+								<ul>
+									<li><a href="women.html">Pools&Tees</a></li>
+									<li><a href="women.html">shirts</a></li>
+									<li><a href="women.html">shorts</a></li>
+									<li><a href="women.html">twinsets</a></li>
+									<li><a href="women.html">kurts</a></li>
+									<li><a href="women.html">jackets</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="women.html">Handbag</a></li>
+									<li><a href="women.html">Slingbags</a></li>
+									<li><a href="women.html">Clutches</a></li>
+									<li><a href="women.html">Totes</a></li>
+									<li><a href="women.html">Wallets</a></li>
+									<li><a href="women.html">Laptopbags</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>account</h4>
+								<ul>
+									<li><a href="#">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="women.html">my shopping bag</a></li>
+									<li><a href="women.html">brands</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Accessories</h4>
+								<ul>
+									<li><a href="women.html">Belts</a></li>
+									<li><a href="women.html">Pens</a></li>
+									<li><a href="women.html">Eyeglasses</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">Watches</a></li>
+									<li><a href="women.html">Jewellery</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Footwear</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>	 -->			
+			
+				<!-- <li><a class="color8" href="#">T-SHIRT</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Clothing</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">brands</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>kids</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>account</h4>
+								<ul>
+									<li><a href="#">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="women.html">my shopping bag</a></li>
+									<li><a href="women.html">brands</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Accessories</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Footwear</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li> -->
+				<!-- <li><a class="color9" href="#">WATCHES</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Clothing</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">brands</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>kids</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>account</h4>
+								<ul>
+									<li><a href="#">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="women.html">my shopping bag</a></li>
+									<li><a href="women.html">brands</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Accessories</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Footwear</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+					</div> -->
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>
+		 </ul> 
+	</div>
+</div>
+</div>
+<!-- <div class="arriv">
+	<div class="container">
+		<div class="arriv-top">
+			<div class="col-md-6 arriv-left">
+				<img src="images/i.jpg" class="img-responsive" alt="">
+				<div class="arriv-info">
+					<h3>NEW ARRIVALS</h3>
+					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+					<div class="crt-btn">
+						<a href="details.html">TAKE A LOOK</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 arriv-right">
+				<img src="images/bann.jpg" class="img-responsive" alt="">
+				<div class="arriv-info">
+					<h3>TUXEDO</h3>
+					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+					<div class="crt-btn">
+						<a href="details.html">SHOP NOW</a>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="arriv-bottm">
+			<div class="col-md-8 arriv-left1">
+				<!--<img src="images/acer-laptop-aspire-e5-575-53ej.jpg" class="img-responsive" alt="">
+				<div class="arriv-info1">
+					<h3>SWEATER</h3>
+					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+					<div class="crt-btn">
+						<a href="details.html">SHOP NOW</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 arriv-right1">
+				<img src="images/4.jpg" class="img-responsive" alt="">
+				<div class="arriv-info2">
+					<a href="details.html"><h3>Trekking Shoes<i class="ars"></i></h3></a>
+				</div>-->
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="arriv-las">
+		<!--<div class="col-md-4 arriv-left2">
+				<img src="images/5.jpg" class="img-responsive" alt="">
+				<div class="arriv-info2">
+					<a href="details.html"><h3>Casual Glasses<i class="ars"></i></h3></a>
+				</div>
+			</div>
+			<div class="col-md-4 arriv-middle">
+				<img src="images/6.jpg" class="img-responsive" alt="">
+				<div class="arriv-info3">
+					<h3>FRESH LOOK T-SHIRT</h3>
+					<div class="crt-btn">
+						<a href="details.html">SHOP NOW</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 arriv-right2">
+				<img src="images/7.jpg" class="img-responsive" alt="">
+				<div class="arriv-info2">
+					<a href="details.html"><h3>Elegant Watches<i class="ars"></i></h3></a>
+				</div>  -->	
+			</div>
+
+</div>
+<div class="products">
+<div ui-view>
+</div>
+</div>
+
+
+<!-- <div class="product-left">
+ 
+<div class="clearfix"> </div>
+	   		     </div>
+	   		     <div class="clearfix"> </div>
+	   		   </div> 
+	   		      <div class="sub-cate">
+				<div class=" top-nav rsidebar span_1_of_left">
+					<h3 class="cate">CATEGORIES</h3>
+		 <ul class="menu">
+		<li class="item1"><a ui-sref="amcinfo">Contract & Services </a>
+			<ul class="cute">
+				<li class="subitem1"><a ui-sref="category">Category </a></li>
+				<li class="subitem2"><a ui-sref="brand">Brand</a></li>
+				<li class="subitem1"><a ui-sref="amclist">AmcList </a></li>
+				<li class="subitem2"><a ui-sref="buyer">Buyer</a></li>
+			</ul>
+		</li>
+		
+		
+	</ul>
+</div> -->
+<!--initiate accordion-->
+		<script type="text/javascript">
+			(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+			
+			});
+		</script>
+
+</div>
+
+	
+</body>
+</html>

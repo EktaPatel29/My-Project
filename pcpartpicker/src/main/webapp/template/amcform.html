@@ -1,0 +1,82 @@
+<div class="container">
+<div class="main">
+<div class="registration">
+		<div class="registration_left">
+		<h2>new user? <span> create an account </span></h2>
+<div class="registration_form">
+<form id="registration_form" data-ng-submit="amcformCtrl.submit()">
+		
+		<!-- <p>Name: <input type="text" data-ng-model="amcformCtrl.amcF.name"></p>
+		<p>Email: <input type="text" data-ng-model="amcformCtrl.amcF.email"></p>
+		<p>Type Of Contract: <input type="text"  data-ng-model="amcformCtrl.amcF.typeofcontract"></p>
+		 
+		<p>Agreement Period: <input type="text" data-ng-model="amcformCtrl.amcF.period"></p>
+		<p>Date Of Contract: <input type="text" data-ng-model="amcformCtrl.amcF.dateofcontract"></p>
+		<p>Date Of Expiry: <input type="text" data-ng-model="amcformCtrl.amcF.dateofexpiry"></p>
+		
+		<p>Product: 
+
+		<select ng-model="amcformCtrl.amcF.product" ng-options="x for x in amcformCtrl.names">
+		</select></p>
+		<p>Quantity: <input type="text" data-ng-model="amcformCtrl.amcF.quantity" ng-change="amcformCtrl.calcost(amcformCtrl.amcF.product,amcformCtrl.amcF.quantity)"></p>
+		<p>Cost: <input type="text" data-ng-model="amcformCtrl.total" ></p>
+		
+		 -->
+		 
+<div>
+<label>
+<input placeholder="Name:" type="text" data-ng-model="amcformCtrl.amcF.name" tabindex="1" required autofocus>
+</label></div> 
+
+<div>
+<label>
+<input placeholder="Email:" type="text" data-ng-model="amcformCtrl.amcF.email" tabindex="1" required autofocus>
+</label></div> 
+	
+<div>
+<label>
+<input placeholder="Type of contract:" type="text" data-ng-model="amcformCtrl.amcF.typeofcontract" tabindex="1" required autofocus>
+</label></div>	
+
+ <div>
+<label>
+<input placeholder="Agreement period:" type="text" data-ng-model="amcformCtrl.amcF.period" tabindex="1" required autofocus>
+</label></div>
+		 
+ <div>
+<label>
+<input placeholder="Date of contract:" type="text" data-ng-model="amcformCtrl.amcF.dateofcontract" tabindex="1" required autofocus>
+</label></div>
+
+<div>
+<label>
+<input placeholder="Date of expiry:" type="text" data-ng-model="amcformCtrl.amcF.dateofexpiry" tabindex="1" required autofocus>
+</label></div>
+		 		 
+<div class="sky-form">
+					<div class="sky_form1">
+		<ul>
+		<li><label><i></i>Product <label></li>
+		 <select ng-model="amcformCtrl.amcF.product" ng-options="x for x in amcformCtrl.names">
+		</select>
+		</ul></div></div>
+		
+<div>
+<label>
+<input placeholder="Quantity:" type="text" data-ng-model="amcformCtrl.amcF.quantity" ng-change="amcformCtrl.calcost(amcformCtrl.amcF.product,amcformCtrl.amcF.quantity)" tabindex="1" required autofocus>
+</label></div>	
+
+<div>
+<label>
+<input placeholder="Cost:" type="text" data-ng-model=data-ng-model="amcformCtrl.total" tabindex="1" required autofocus>
+</label></div>
+	<div>
+		<input type="submit" id="register-submit" value="Submit" /><br>	
+		</div>
+</div>
+</div>
+</div>	</div>
+		
+	</form>
+	
+	

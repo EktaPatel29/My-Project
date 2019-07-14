@@ -1,0 +1,55 @@
+<div class="container">
+<div class="main">
+<div class="registration">
+		<div class="registration_left">
+		<h2>new user? <span> create an account </span></h2>
+<div class="registration_form">
+<form id="registration_form" data-ng-submit="submit()">
+		
+		
+		<!--<p>Brand Name: <input type="text" data-ng-model="brandName"></p>  -->
+		<div>
+		<label>
+		<input placeholder="Brand name:" type="text" data-ng-model="brandName" tabindex="1" required autofocus>
+		</label>
+		</div>
+		<div>
+		<div class="sky-form">
+					<div class="sky_form1">
+		<ul>
+		<li><label><i></i>Enter Category: <label></li>
+		<select ng-model="selectedCategory" ng-options="x.categoryName for x in brandCtrl.category">
+						</select>
+						</ul>
+		</label></div></div>
+		<br><br>
+		 <div>
+				<input type="submit" id="register-submit" value="Submit" /><br>	
+			</div>	
+				
+				 <div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>ID.</th>
+                              <th>Name</th>
+                              <th>Category</th>
+                              <th width="20%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="u in brand">
+
+                              <td><span ng-bind="u.brandId"></span></td>
+                              <td><span ng-bind="u.brandName"></span></td>
+                              <td><span ng-bind="u.category.categoryName"></span></td>
+                              <!-- td>   
+                               <button type="button" ng-click="deleteBrandById(u.brandId)" class="btn btn-danger custom-width">Remove</button>
+                              </td-->
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+		
+		
+	</form>

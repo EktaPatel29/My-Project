@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+
+    <meta charset="utf-8">
+    <title>Service App</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" />
+      link rel="stylesheet" href="css/app.css" />--
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>    
+    <script src="js/vendor/angular-pdf/dist/angular-pdf.js"></script>  -->
+    <link rel="stylesheet" href="logincss/style.css">
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery (necessary JavaScript plugins) -->
+<script type='text/javascript' src="js/jquery-1.11.1.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+<!-- start menu -->
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<script src="js/menu_jquery.js"></script>
+<script src="js/simpleCart.min.js"> </script>
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+    <script src="js/ng-file-upload.js"></script>
+    <script src="js/ngCart.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controller/CategoryController.js"></script>
+	<script src="js/controller/BrandController.js"></script>
+	<script src="js/controller/AmclistController.js"></script>
+	<script src="js/controller/AmcformController.js"></script>
+	<script src="js/controller/AmcinfoController.js"></script>
+	<script src="js/controller/BuyController.js"></script>
+	<script src="js/controller/AuctionViewController.js"></script>
+	<script src="js/controller/AfterloginController.js"></script>
+	<!--  <script type="text/javascript">
+	var app = angular.module('Afterlogin', []);
+	
+	app.controller('AfterloginController',[ '$scope', '$http', function($scope, $http) {
+			
+		alert("Welcome to customer page:");
+	    //self.bidobj=$stateParams.bidobj;
+	    //alert("Bidder:"+JSON.stringify($stateParams.bidobj));
+	        $scope.user,$scope.UName='';
+	    $scope.getUser=function()
+		{
+			alert("Inside getUser");
+			var response = $http.get('/getUserName');
+			response.success(function(data, status, headers, config) {
+				$scope.user=data;
+				alert( "Successfull: " + JSON.stringify({data: data}));
+				
+				$scope.UName=$scope.user.userName;
+				alert("Name:"+$scope.UName);
+				//self.insertUser(self.user);
+			});
+			response.error(function(data, status, headers, config) {
+				alert( "Exception details: " + JSON.stringify({data: data}));
+			});
+			
+		}		
+	    $scope.getUser();
+					}]);
+</script>-->
+	
+</head>
+<body><!-- header_top -->
+<div class="top_bg">
+		<div class="container">
+			<div class="header_top">
+				<div class="top_right">
+					<ul>
+
+						<span></span>
+						<li><a href="contact.html">Contact Us</a></li>
+
+					</ul>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- header -->
+	<div class="header_bg">
+		<div class="container">
+			<div class="header">
+				<div class="head-t">
+					<div class="logo">
+						<h1>
+							<b>ONLINE TRONICS</b>
+						</h1>
+
+					</div>
+					<!-- start header_right -->
+					<div class="header_right">
+						<div class="rgt-bottom">
+							<div class="log">
+								<div class="login">
+									<div class="create_btn">
+										<a href="login"><span>LOGOUT</span></a>
+										<div id="loginBox"></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="cart box_1">
+								<a href="checkout.html"> </a>
+
+								<div class="clearfix"></div>
+							</div>
+
+							<div class="clearfix"></div>
+						</div>
+						<div class="search">
+							<form>
+								<input type="text" value="" placeholder="search..."> <input
+									type="submit" value="">
+							</form>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- start header menu -->
+				<ul class="megamenu skyblue">
+					<li class="active grid"><a class="color1" href="login">Home</a></li>
+					<li class="grid"><a class="color2" href="#">Categories</a>
+						<div class="megapanel">
+							<div class="row">
+								<div class="col1">
+									<div class="h_nav">
+										<h4>Computer Systems</h4>
+										<ul>
+											<li><a href=#>LED Monitors</a></li>
+											<li><a href="products">Laptops</a></li>
+											<li><a href="#">CPU</a></li>
+											<li><a href="#">Mouse</a></li>
+											<li><a href="#">Projector</a></li>
+
+										</ul>
+									</div>
+								</div>
+								<div class="col1">
+									<div class="h_nav">
+										<h4>Components</h4>
+										<ul>
+											<li><a href="#">CPU Fan</a></li>
+											<li><a href="#">External Hard Drive</a></li>
+											<li><a href="#">DVD Writer</a></li>
+											<li><a href="#">RAM DDR-1,2,3</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col1">
+									<div class="h_nav">
+										<h4>Networking</h4>
+										<ul>
+											<li><a href="#">Router</a></li>
+											<li><a href="#">CCTV Camera</a></li>
+											<li><a href="#">USB Cable</a></li>
+											<li><a href="#">Parallel Cable</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col1">
+									<div class="h_nav">
+										<h4>Office Solutions</h4>
+										<ul>
+											<li><a href="printers">Printer</a></li>
+											<li><a href="#">Spike Guard</a></li>
+											<li><a href="#">Ribbion Catridge</a></li>
+											<li><a href="#">Card Reader</a></li>
+											<li><a href="#">Antivirus</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col1">
+									<div class="h_nav">
+										<h4>Miscellaneous</h4>
+										<ul>
+											<li><a href="#">Invertor</a></li>
+											<li><a href="#">Cabinet</a></li>
+
+										</ul>
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col2"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+							</div>
+						</div></li>
+					<li><a class="color4" href="#">Contract</a>
+						<div class="megapanel">
+							<div class="row">
+								<div class="col1">
+									<div class="h_nav">
+										<h4>Maintenance</h4>
+										<ul>
+											<li><a ui-sref="amcinfo"> AMC Plan</a></li>
+											
+
+										</ul>
+									</div>
+								</div>
+
+
+							</div>
+							<div class="row">
+								<div class="col2"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+							</div>
+						</div></li>
+					<li><a class="color5" href="#">Auction</a>
+						<div class="megapanel">
+							<div class="row">
+								<div class="col1">
+									<div class="h_nav">
+										<h4>Bidding</h4>
+										<ul>
+											<li><a href="women.html">Products</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col2"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+							</div>
+						</div></li>
+					<li><a class="color6" href="#">Services</a>
+						<div class="megapanel">
+							<div class="row">
+								<div class="col1">
+									<div class="h_nav">
+										<h4>Support</h4>
+										<ul>
+											<li><a href="#">Online Query Solutions</a></li>
+											<li><a href="#">Software Update</a></li>
+											<li><a href="com">Complaint</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col2"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+								<div class="col1"></div>
+							</div>
+						</div></li>
+
+
+
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+			</div>
+			</li>
+			</ul>
+		</div>
+	</div>
+	
+<div class="products">
+<div ui-view>
+</div>
+</div>
+
+
+<!-- <div class="product-left">
+ 
+<div class="clearfix"> </div>
+	   		     </div>
+	   		     <div class="clearfix"> </div>
+	   		   </div> 
+	   		      <div class="sub-cate">
+				<div class=" top-nav rsidebar span_1_of_left">
+					<h3 class="cate">CATEGORIES</h3>
+		 <ul class="menu">
+		<li class="item1"><a ui-sref="amcinfo">Contract & Services </a>
+			<ul class="cute">
+				<li class="subitem1"><a ui-sref="category">Category </a></li>
+				<li class="subitem2"><a ui-sref="brand">Brand</a></li>
+				<li class="subitem1"><a ui-sref="amclist">AmcList </a></li>
+				<li class="subitem2"><a ui-sref="buyer">Buyer</a></li>
+			</ul>
+		</li>
+		
+		
+	</ul>
+</div> -->
+<!--initiate accordion-->
+		<script type="text/javascript">
+			(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+			
+			});
+		</script>
+
+</div>
+
+	
+</body>
+</html>

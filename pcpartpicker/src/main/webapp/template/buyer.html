@@ -1,0 +1,75 @@
+<div class="container">
+<div class="main">
+<div class="registration">
+		<div class="registration_left">
+		<h2>new user? <span> create an account </span></h2>
+<div class="registration_form">
+<form id="registration_form" data-ng-submit="buyCtrl.submit()">
+
+<div>
+<label>
+<input placeholder="Name:" type="text" data-ng-model="buyCtrl.buyer.buyerName" tabindex="1" required autofocus>
+ <!-- Name: <input type="text" data-ng-model="buyCtrl.buyer.buyerName"> -->
+</label></div>
+
+
+<div>
+<label>
+<input placeholder="Product Name:" type="text" data-ng-model="buyCtrl.buyer.productName" tabindex="1" required autofocus>
+<!--<p> Product Name: <input type="text" data-ng-model="buyCtrl.buyer.productName"> </p>  --> 
+</label></div>
+
+
+<div>
+<label>
+<input placeholder="Amount:" type="text" data-ng-model="buyCtrl.buyer.amount" tabindex="1" required autofocus>
+<!-- <p> Amount: <input type="number" data-ng-model="buyCtrl.buyer.amount"></p> -->
+</label></div>
+
+<div>
+<label>
+<input placeholder="Quantity:" type="text" data-ng-model="buyCtrl.buyer.quantity" tabindex="1" required autofocus>
+<!--<p> Quantity:<input type="number" data-ng-model="buyCtrl.buyer.quantity"> </p>  -->
+</label></div>
+
+<div>
+<input type="submit" id="register-submit" value="Submit">
+</div>
+</div>
+</div>
+</div>	</div>
+              <div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>ID.</th>
+                              <th>Name</th>
+                              <th>Address</th>
+                              <th>Email</th>
+                              <th width="20%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="u in buyCtrl.listofbuyers">
+                              <td><span ng-bind="u.buyerId"></span></td>
+                              <td><span ng-bind="u.buyerName"></span></td>
+                              <td><span ng-bind="u.productName"></span></td>
+                              <td><span ng-bind="u.amount"></span></td>
+                              <td><span ng-bind="u.quantity"></span></td>
+                              <td>
+                              <button type="button" ng-click="buyCtrl.editBuyer(u)" class="btn btn-success custom-width">Edit</button>  <button type="button" ng-click="buyCtrl.deleteBuyer(u.buyerId)" class="btn btn-danger custom-width">Remove</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+              
+              <div class="wrapper" ng-controller="buyCtrl">
+              <ng-pdf template-url="/partials/viewer.html"></ng-pdf>
+               
+              </div>
+              <ng-pdf template-url="/partials/viewer.html" scale="page-fit"></ng-pdf>
+              
+          </div>
+      </div>
+</form>

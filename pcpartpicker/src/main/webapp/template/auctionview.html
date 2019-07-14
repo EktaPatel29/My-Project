@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="top_bg">
+	<div class="container">
+		<div class="header_top">
+			<div class="top_right">
+				<ul>
+				<!--  	<li><a href="#">help</a></li>| -->
+					<li><a href="contact.html">Contact</a></li>|
+				<!--	<li><a href="#">Delivery information</a></li> -->
+				</ul>
+			</div>
+			<div class="top_left">
+				<!--<h2><span></span> Call us : 032 2352 782</h2>  -->
+			</div>
+				<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+<form>
+	
+	<div class="sub-cate">
+                <div  class=" top-nav rsidebar span_1_of_left"">
+                    <h3 class="cate">CATEGORIES</h3>
+          <ul class="menu" data-ng-repeat="u in avCtrl.category">
+        <li class="item1" ng-click="avCtrl.displayItemById(u)"><a href="#">{{u.categoryName}}</a>        					
+        </li>       
+    </ul>
+    </div>
+    
+   
+    
+                    </div>
+                   
+<script type="text/javascript">
+            /*$(function() {
+                var menu_ul = $('.menu > li > ul'),
+                       menu_select  = $('.menu > li > select');
+                menu_ul.hide();
+                menu_a.click(function(e) {
+                    e.preventDefault();
+                    if(!$(this).hasClass('active')) {
+                        menu_a.removeClass('active');
+                        menu_ul.filter(':visible').slideUp('normal');
+                        $(this).addClass('active').next().stop(true,true).slideDown('normal');
+                    } else {
+                        $(this).removeClass('active');
+                        $(this).next().stop(true,true).slideUp('normal');
+                    }
+                });
+            
+            });*/
+        </script>
+        
+        
+ <div class="grid-product"  ng-repeat="u in avCtrl.listofitems">
+		  <div class="product-grid">
+			<div class="content_box">
+			   	<div class="left-grid-view grid-view-left">
+			   	              <p><!--  span ng-bind="u.auctionItemImage"></span--></p>
+			   	              <img src="images/hp-ink-tank-1.jpg"  alt=""/>
+			   	              <div class="mask">
+	                          <div class="info">Quick View</div>
+			                  </div>
+                              <p><span ng-bind="u.auctionItemName"></span></p>
+                              <p><span ng-bind="u.auctionItemPrice"></span></p>
+                              <p>Total Bids:<span ng-bind="avCtrl.bidCount"></span> bids</p>
+                              <p>
+                              <button  type="button"  class="btn btn-success custom-width" ng-click="avCtrl.displayByAuctionId(u.auctionItemId,u.auctionItemPrice)" class="btn btn-success custom-width">Bid</button>
+                              </p>                              	
+			            </div>                           
+				</div>				     
+			   	</div>
+              </div>
+			 </div>
+			<div class="clearfix"> </div>
+
+</form>
+</body>
+</html>

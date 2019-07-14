@@ -1,0 +1,76 @@
+
+<div class="container">
+<div class="main">
+<div class="registration">
+		<div class="registration_left">
+		<h2>Add <span>Auction Item</span></h2>
+<div class="registration_form">
+<form  id="registration_form" name="additemForm" data-ng-submit="addItemCtrl.submit()">
+		
+		<br><input placeholder="Item Name:" type="text" data-ng-model="addItemCtrl.auctionitem.auctionItemName" name="iname" required ng-minlength="3">
+		<span ng-show="additemForm.iname.$touched && additemForm.iname.$invalid"></span></p>
+		<br><input placeholder="Item Price:" type="text" name="iprice" data-ng-model="addItemCtrl.auctionitem.auctionItemPrice">
+		<span ng-show="additemForm.iprice.$touched && additemForm.iprice.$invalid"></span></p>
+		Enter Item Category :<select ng-model="addItemCtrl.auctionitem.category"  ng-options="x.categoryName for x in addItemCtrl.category">
+						</select><br/>
+		<br><input placeholder="Specifications:" type="text" name="ispec" data-ng-model="addItemCtrl.auctionitem.spec">
+		<span ng-show="additemForm.ispec.$touched && additemForm.ispec.$invalid"></span></p>
+		<br><input placeholder="Item Condition:" type="text"  name="icond" data-ng-model="addItemCtrl.auctionitem.auctionItemCondition">
+		<span ng-show="additemForm.icond.$touched && additemForm.icond.$invalid"></span></p>
+		<br>
+		
+		
+		 <button type="file" ngf-select="addItemCtrl.uploadFiles($file, $invalidFiles)"
+          accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
+      Select File</button>
+		
+		<!--  <br><input placeholder="Image Upload:" type="file" id="file" data-ng-model="addItemCtrl.auctionitem.auctionItemImage" ng-click = "uploadFile()">--></p>
+		<br><input placeholder="Start Date:" type="datetime-local" name="startdate" data-ng-model="addItemCtrl.auctionitem.startDate">
+		<span ng-show="additemForm.startdate.$touched && additemForm.startdate.$invalid"></span></p>
+		<br><input placeholder="End Date:" type="datetime-local"name="enddate" data-ng-model="addItemCtrl.auctionitem.endDate">
+		<span ng-show="additemForm.enddate.$touched && additemForm.enddate.$invalid"></span></p>
+				<input type="submit" id="register-submit" value="Submit" /><br/><br/>
+	</div>
+</div>
+</div>	</div>	
+		
+	
+	
+	<!--  <div class="panel panel-default">-->
+              
+              <div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Name</th>
+                              <th>Price</th>
+                              <th>Specifications</th>
+                              <th>Category</th>
+                              <th>Item Condition</th>
+                              <th>Start Date</th>
+                              <th>End Date</th>
+                              <th width="20%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="u in addItemCtrl.listofitems">
+                              <td><span ng-bind="u.auctionItemId"></span></td>
+                              <td><span ng-bind="u.auctionItemName"></span></td>
+                              <td><span ng-bind="u.auctionItemPrice"></span></td>
+                              <td><span ng-bind="u.spec"></span></td>
+                              <td><span ng-bind="u.category.categoryName"></span></td>
+                              <td><span ng-bind="u.auctionItemCondition"></span></td>
+                              <td><span ng-bind="u.startDate"></span></td>
+                              <td><span ng-bind="u.endDate"></span></td>
+                              <td>
+                              <button type="button" ng-click="addItemCtrl.editAuctionItem(u)" class="btn btn-success custom-width">Edit</button>  <button type="button" ng-click="addItemCtrl.deleteAuctionItemById(u.auctionItemId)" class="btn btn-danger custom-width">Remove</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </form>
+</body>
+</html>
